@@ -1,17 +1,34 @@
 package com.constructors;
-
-public class BankProcessor {
-
+import java.util.Scanner;
+public class BankProcessor { 
+	
 	public static void main(String[] args) {
-		BankAccount obj= new BankAccount(986458, "swathi", 80000);
-		System.out.println("Current balance");
-		System.out.println("AccountNumber : " + obj.getAccountNumber());
-		System.out.println("AccountHolder : " + obj.getAccountHolder());
-		System.out.println("Balance : " + obj.getbalance());
-		obj.withdraw(20000);
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter your AccountNumber : ");
+		int num=sc.nextInt();
+		System.out.println("Enter HolderName :");
+		String name=sc.next();
+		System.out.println("Account Balance :");
+		double balance=sc.nextDouble();
+		
+		BankAccount obj= new BankAccount(num, name, balance);
+		
+		
+		
+		
 		
 		System.out.println("----------------");
-		System.out.println("Updated balance : " + obj.getbalance());
+		
+		System.out.println("deposit amount :");
+		double deposit=sc.nextDouble();
+		obj.deposit(deposit);
+		
+		System.out.println("----------------");
+		System.out.println("withdraw amount :");
+		double withdraw=sc.nextDouble();
+		obj.withdraw(withdraw);
+		System.out.println("----------------");
+		System.out.println("Updated balance : " + obj.getBalance());
 		
 	}
 

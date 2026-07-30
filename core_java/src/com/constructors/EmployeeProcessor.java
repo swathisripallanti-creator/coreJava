@@ -1,21 +1,37 @@
 package com.constructors;
-
+import java.util.Scanner;
 public class EmployeeProcessor {
 
 	public static void main(String[] args) {
-		Employee emp= new Employee(96,"swathi", "JD", 80000, 4);
-		System.out.println("Before promotion");
-		System.out.println("ID : " + emp.getEmpId());
-		System.out.println("Name : " + emp.getName());
-		System.out.println("Designation : " + emp.getDesignation());
-		System.out.println("Salary : " + emp.getSalary());
-		System.out.println("PerformanceRating : " + emp.getPerformanceRating());
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter empID :");
+		int id=sc.nextInt();
+		System.out.println(id);
 		
-		emp.promoteEmployee();
+ 		System.out.println("Enter empName :");
+		String name=sc.next();
+		System.out.println(name);
+		
+		System.out.println("Enter empDesg :");
+		String desg=sc.next();
+		System.out.println(desg);
+		
+		System.out.println("Enter empsal :");
+		double sal=sc.nextDouble();
+		System.out.println(sal);
+		
+		System.out.println("Rating :");
+		int rating=sc.nextInt();
+		System.out.println(rating);
+		
+		
+		Employee emp= new Employee(id, name, desg, sal, rating);
 		System.out.println("------------------");
-		System.out.println("After promotion");
-		System.out.println("NewDesignation : " + emp.getDesignation());
-		System.out.println("Salary : " + emp.getSalary());
+		
+		System.out.println("promote Employee");
+		
+	   emp.promoteEmployee();
+		
 		
 		
 		

@@ -1,13 +1,14 @@
 package com.constructors;
 
 public class Employee {
-		private int empId;
-		private String name;
-		private String designation;
-		private double salary;
-		private int performanceRating;
+		 int empId;
+		 String name;
+		 String designation;
+		 double salary;
+		 int performanceRating;
 		
-		public Employee(int empId, String name, String designation, double salary, int performanceRating) {
+		public Employee(int empId, String name, 
+				String designation, double salary, int performanceRating) {
 			this.empId= empId;
 			this.name= name;
 			this.designation= designation;
@@ -40,8 +41,10 @@ public class Employee {
 		public void promoteEmployee() {
 			if(performanceRating >= 4) {
 				salary= salary + (salary*20/100);
-				designation = "SD";
-				System.out.println("promote to next level");
+				System.out.println("after promotion");
+				System.out.println("updated salary :" + salary);
+				System.out.println("Designation : SD");
+		 	    System.out.println("promote to next level");
 			}
 			else {
 				System.out.println("No promotion");
